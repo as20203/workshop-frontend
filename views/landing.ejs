@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    </head>
+	<body >
+
+
+<a  class = "ui button" style="margin:20px auto;display: block;width: 20%" href = "/posts/new"> Make a new post </a>
+
+<% for (let i = 0; i < posts.length; i++) { %>
+    <% const post = posts[i] %>
+    <div class="ui card" style="margin:10px auto">
+        <div class="image">
+            <img src="<%= post.imageURL %>">
+        </div>
+        <div class="content">
+            <h1 class="header"><%= post.title %></h1>
+
+            <div class="description">
+                <%= post.description %>
+            </div>
+        </div>
+        <div class="extra content" style="display: flex">
+            <a href="/posts/<%= post.postId %>/edit"  class = "ui button" > Edit </a>
+            <form action="/posts/<%= post.postId %>?_method=DELETE" method="POST">
+                <button  class = "ui button" > Delete </button>
+            </form>
+        </div>
+    </div>
+    <% } %>
+
+
+ 
+</body>
+</html>

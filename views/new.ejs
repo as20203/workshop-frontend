@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    </head>
+<body >
+
+
+<form action="/posts" method="POST" class="ui form" style="margin:80px auto;width:50%">
+    <h1 style="text-align:center">Create a post</h1>
+    <div class="field">
+      <label>Title</label>
+      <input type="text" name="title" placeholder="Enter title">
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <input type="text" name="description" placeholder="Enter Description">
+    </div>
+
+    <div class="field">
+        <label> Image</label>
+        <input type="text" name="imageURL" placeholder="Enter image url">
+      </div>
+   
+    <button class="ui button" style="margin:0px auto;width:15%;display: block" type="submit">Create</button>
+  </form>
+
+</body>
+</html>
